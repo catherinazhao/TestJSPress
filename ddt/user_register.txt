@@ -1,0 +1,18 @@
+# 数据顺序：账号, 邮箱, 密码, 确认密码, 验证码, 预期结果
+# user_name, email, password, confirm_password, code
+# case01: 账号为空
+,test@qq.com,123456,123456,1234,用户名不能为空
+# case02: 邮箱为空
+test,,123456,123456,1234,邮箱不能为空
+# case03: 密码为空
+test,test@qq.com,,123456,1234,密码不能为空
+# case04: 确认密码为空
+test,test@qq.com,,123456,1234,密码不能为空
+# case05: 验证码为空
+test,test@qq.com,123456,,1234,确认密码不能为空
+# case06: 两次密码不一致
+test,test@qq.com,123456,12345,1234,两次输入密码不一致
+# case07: 验证码填写错误
+test,test@qq.com,123456,123456,1234,验证码不正确
+# case08: 成功注册
+test02,test02@qq.com,123456,123456,<VerifyCode>,注册成功，点击确定进行登录。
